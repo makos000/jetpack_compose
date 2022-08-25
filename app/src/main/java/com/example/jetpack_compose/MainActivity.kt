@@ -52,7 +52,7 @@ class MainActivity : ComponentActivity() {
 private fun MyApp(names: List<String> = listOf("Johnny","Jimmy")) {
     Surface(color = MaterialTheme.colors.background, modifier = Modifier.fillMaxWidth()) {
 
-        var shouldShowOnboarding by rememberSaveable { mutableStateOf(false) }
+        var shouldShowOnboarding by rememberSaveable { mutableStateOf(true) }
 
         if (shouldShowOnboarding) {
             OnboardingScreen(onContinueClicked = { shouldShowOnboarding = false })
